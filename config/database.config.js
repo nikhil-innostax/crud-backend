@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 module.exports = {
-    url: 'mongodb+srv://nikhilgarg:XtCUYnWJDL8PW8TR@cluster0.qfhuenj.mongodb.net/'
+    url: `${process.env.MONGO_DB}`
 }
