@@ -20,7 +20,7 @@ mongoose.connect(dbConfig.url).then(() => {
     process.exit();
 });
 
-app.use('/users/',UserRoute)
+app.use('/users',UserRoute)
 
 app.listen(3000,()=>{
     console.log('Server is running on 3000')
