@@ -2,5 +2,5 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = {
-    url: `${process.env.MONGO_DB}`
+    url: `${process.env.DATABASE_URL}`
 }

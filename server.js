@@ -3,7 +3,7 @@ const bodyParser=require('body-parser')
 const dbConfig=require('./config/database.config')
 const mongoose=require('mongoose');
 const cors=require('cors')
-const UserRoute = require('./routes/User')
+const UserRoute = require('./routes/user')
 const app=express();
 
 
@@ -20,7 +20,7 @@ mongoose.connect(dbConfig.url).then(() => {
     process.exit();
 });
 
-app.use('/',UserRoute)
+app.use('/users',UserRoute)
 
 app.listen(3000,()=>{
     console.log('Server is running on 3000')
