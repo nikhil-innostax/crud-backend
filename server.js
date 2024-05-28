@@ -6,6 +6,7 @@ const cors=require('cors')
 const UserRoute = require('./routes/User')
 const app=express();
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json())
