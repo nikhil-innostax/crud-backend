@@ -1,7 +1,7 @@
-const User=require('../Schema/User')
+const User=require('../schema/user')
 
 //read
-exports.findAll=async (req,res)=>{
+exports.read=async (req,res)=>{
     await User.find().then(data=>{
         res.status(200).send({
             message:"Data fetched",
@@ -12,21 +12,21 @@ exports.findAll=async (req,res)=>{
     })
 }
 
-exports.findById= async (req, res) => {
-    const { id } = req.params;
-      await User.findById(id).then(data => {
-        if (!data) {
-          res.status(404).send("User Not Found");
-        } else {
-          res.status(200).send({
-            message: "data fetched",
-            user: data
-          });
-        }
-      }).catch(e=> {
-        res.status(500).send("Error:"+e); 
-      });
-}
+// exports.findById= async (req, res) => {
+//     const { id } = req.params;
+//       await User.findById(id).then(data => {
+//         if (!data) {
+//           res.status(404).send("User Not Found");
+//         } else {
+//           res.status(200).send({
+//             message: "data fetched",
+//             user: data
+//           });
+//         }
+//       }).catch(e=> {
+//         res.status(500).send("Error:"+e); 
+//       });
+// }
     
 
 //create
